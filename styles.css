@@ -1,0 +1,268 @@
+/* Colori */
+/* Corpo della pagina */
+body {
+  background-color: #3498db; /* Blu notte */
+
+}
+
+/* Mix per i colori della torta */
+/* Struttura della torta */
+.cake {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -125px;
+}
+
+.plate {
+  width: 270px;
+  height: 110px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+  position: absolute;
+}
+
+/* Strati della torta */
+.layer {
+  position: absolute;
+  display: block;
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #003366; /* Blu mezzanotte */
+  box-shadow: 
+        0 2px 0px #003366,  /* Ombra blu scuro ma non nero */
+        0 4px 0px #003366,
+        0 6px 0px #003366,
+        0 8px 0px #003366,
+        0 10px 0px #003366,
+        0 12px 0px #003366,
+        0 14px 0px #003366,
+        0 16px 0px #003366,
+        0 18px 0px #003366,
+        0 20px 0px #003366, 
+        0 22px 0px #003366, 
+        0 24px 0px #003366, 
+        0 26px 0px #003366; 
+}
+
+.layer-top {
+  top: 0px;
+}
+
+.layer-middle {
+  top: 33px;
+}
+
+.layer-bottom {
+  top: 66px;
+}
+
+/* Glassa sopra la torta */
+.icing {
+  top: 2px;
+  left: 5px;
+  background-color: #ffd700;
+  width: 240px;
+  height: 90px;
+  border-radius: 50%;
+   
+}
+.icing:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  bottom: 6px;
+  left: 5px;
+  background-color: #ffd700;
+  box-shadow: 0 0 4px #ffd700, 0 0 4px #ffd700, 0 0 4px #ffd700;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Gocce di glassa */
+.drip {
+  display: block;
+  width: 50px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #ffd700;
+}
+
+.drip1 {
+  top: 53px;
+  left: 5px;
+  transform: skewY(15deg);
+  height: 48px;
+  width: 40px;
+}
+
+.drip2 {
+  top: 69px;
+  left: 181px;
+  transform: skewY(-15deg);
+}
+
+.drip3 {
+  top: 54px;
+  left: 90px;
+  width: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+/* Candela sopra la torta */
+.candle {
+  background-color: #7B020B;
+  width: 16px;
+  height: 50px;
+  border-radius: 8px/4px;
+  top: -20px;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 10;
+}
+.candle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ad030f;
+}
+
+/* Fiamma della candela */
+.flame {
+  position: absolute;
+  background-color: orange;
+  width: 15px;
+  height: 35px;
+  border-radius: 10px 10px 10px 10px/25px 25px 10px 10px;
+  top: -34px;
+  left: 50%;
+  margin-left: -7.5px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  transform-origin: 50% 90%;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+/* Animazione della fiamma */
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
+  }
+  25% {
+    transform: skewX(-5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    transform: skewX(10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+  }
+  75% {
+    transform: skewX(-10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+}
+
+/* Container per i palloncini */
+.balloon-container {
+  position: absolute;
+  bottom: -100px; /* Posizione iniziale sotto lo schermo */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none; /* Impedisce che i palloncini interferiscano con gli altri elementi */
+}
+
+/* Stile base per i palloncini */
+.balloon {
+  position: absolute;
+  bottom: -50px; /* Posizione iniziale sotto lo schermo */
+  width: 50px;
+  height: 70px;
+  background-color: #ffb3b3; /* Colore pastello (rosa chiaro) */
+  border-radius: 50%; /* Forma arrotondata */
+  animation: float 5s linear infinite; /* Animazione di galleggiamento */
+}
+
+/* Colori pastellati per i palloncini */
+.balloon:nth-child(1) {
+  background-color: #ffb3b3; /* Rosa pastello */
+}
+.balloon:nth-child(2) {
+  background-color: #b3e0ff; /* Blu pastello */
+}
+.balloon:nth-child(3) {
+  background-color: #b3ffb3; /* Verde pastello */
+}
+.balloon:nth-child(4) {
+  background-color: #ffeb99; /* Giallo pastello */
+}
+
+/* Animazione per far salire i palloncini */
+@keyframes float {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(-100vh); /* Muoviti verso l'alto */
+    opacity: 0; /* Svanisci quando escono dallo schermo */
+  }
+}
+
+/* Genera una posizione casuale orizzontale per ogni palloncino */
+.balloon:nth-child(1) {
+  left: 10%; /* Posizione casuale sul lato sinistro */
+  animation-delay: 0s;
+}
+.balloon:nth-child(2) {
+  left: 30%; /* Posizione casuale al centro */
+  animation-delay: 1s;
+}
+.balloon:nth-child(3) {
+  left: 50%; /* Posizione centrale */
+  animation-delay: 2s;
+}
+.balloon:nth-child(4) {
+  left: 70%; /* Posizione casuale sul lato destro */
+  animation-delay: 3s;
+}
+
+/* Messaggio di auguri */
+.text-arc {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+text {
+  font-family: 'Pinyon Script', cursive; /* Applica il font Pinyon Script */
+  font-size: 70px;
+  fill: #f9da28;
+  text-anchor: middle;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Ombra leggera per profondità */
+}
